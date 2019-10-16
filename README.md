@@ -89,11 +89,18 @@ npm run prod
 - Create a Dataset
   ###### [ POST ] `/v1/radar/:radar/dataset/create`
   ```
-  ...
+  name
   ```
 ---
 
-
+- Update a Dataset
+  ###### [ POST ] `/v1/radar/:radar/dataset/update`
+  ```
+  name, radar
+  ```
+- Delete a Dataset
+  ###### [ POST ] `/v1/radar/:radar/dataset/:dataset/delete`
+--- 
 - All Dots of a Dataset
   ###### [ GET ] `/v1/radar/:radar/dataset/:dataset/dot`
 ---
