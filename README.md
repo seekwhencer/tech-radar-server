@@ -1,9 +1,7 @@
 # tech-radar-server
 
 This is the backend for the tech-radar.
-  
-### `_Work in Progress_`
-  
+   
 ## Features
 
 - written in ES6
@@ -66,13 +64,15 @@ npm run prod
 - Create a Radar
   ###### [ POST ] `/v1/radar/create`
   ```
-  ...
+  label, theme, seet_to, seed_from, quadrant0_label, quadrant1_label, quadrant2_label, quadrant3_label,
+  ring0_label, ring1_label, ring2_label, ring3_label, dot_offset_x, dot_offset_y
   ```
 ---
 - Update a Radar
   ###### [ POST ] `/v1/radar/:radar/update`
   ```
-  ...
+  label, theme, seet_to, seed_from, quadrant0_label, quadrant1_label, quadrant2_label, quadrant3_label,
+  ring0_label, ring1_label, ring2_label, ring3_label, dot_offset_x, dot_offset_y
   ```
 ---
 - Delete a Radar
@@ -92,7 +92,6 @@ npm run prod
   name
   ```
 ---
-
 - Update a Dataset
   ###### [ POST ] `/v1/radar/:radar/dataset/update`
   ```
@@ -107,11 +106,20 @@ npm run prod
 - A Dot by ID
   ###### [ GET ] `/v1/radar/:radar/dataset/:dataset/dot/:dot`
 ---
-- Create a Dataset
+- Create a Dot
   ###### [ POST ] `/v1/radar/:radar/dataset/:dataset/dot/create`
   ```
-  ...
+  label, radar, version, quadrant, ring, active, moved, boost
   ```
 ---
+- Update a Dot
+  ###### [ POST ] `/v1/radar/:radar/dataset/:dataset/dot/:dot/update`
+  ```
+  label, radar, version, quadrant, ring, active, moved, boost
+  ```
+---
+- Update a Dot
+  ###### [ POST ] `/v1/radar/:radar/dataset/:dataset/dot/:dot/delete`
+
 
 
