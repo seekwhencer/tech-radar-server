@@ -1,0 +1,44 @@
+{
+  "id": "ai",
+  "label": "A.I.",
+  "theme": "forest",
+  "default": false,
+  "version": "2019.09",
+  "seed": {
+    "from": 20,
+    "to": 50
+  },
+  "dot": {
+    "offset_x": 100,
+    "offset_y": 100
+  },
+  "quadrants": [
+    {
+      "label": "Mechanics"
+    },
+    {
+      "label": "Tools"
+    },
+    {
+      "label": "DevOps / Infrastructure"
+    },
+    {
+      "label": "Platforms / Backend"
+    }
+  ],
+  "rings": [
+    {
+      "label": "ADOPT",
+      "color": "#93c47d"
+    },
+    {
+      "label": "TRIAL"
+    },
+    {
+      "label": "ASSESS"
+    },
+    {
+      "label": "HOLD"
+    }
+  ]
+}
