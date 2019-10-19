@@ -1,33 +1,48 @@
 {
-    "id": "backend",
-    "title": "Backend",
-    "seed": {
-        "from": 20,
-        "to": 50
+  "id": "backend",
+  "label": "Backend",
+  "seed": {
+    "from": 20,
+    "to": 50
+  },
+  "dot": {
+    "offset_x": 100,
+    "offset_y": 100
+  },
+  "quadrants": [
+    {
+      "label": "A.I."
     },
-    "colors": {
-        "background": "#fff",
-        "grid": "#e60023",
-        "inactive": "#ddd"
+    {
+      "label": "Frontend / Web"
     },
-    "quadrants": [
-        {"name": "A.I."},
-        {"name": "Frontend / Web"},
-        {"name": "DevOps / Infrastructure"},
-        {"name": "Platforms / Backend"}
-    ],
-    "rings": [
-        {"name": "ADOPT", "color": "#93c47d"},
-        {"name": "TRIAL", "color": "#93d2c2"},
-        {"name": "ASSESS", "color": "#fbdb84"},
-        {"name": "HOLD", "color": "#efafa9"}
-    ],
-    "dot": {
-        "offset": {
-            "x": 100,
-            "y": 100
-        }
+    {
+      "label": "DevOps / Infrastructure"
     },
-    "svg_id": "radar",
-    "print_layout": true
+    {
+      "label": "Platforms / Backend"
+    }
+  ],
+  "rings": [
+    {
+      "label": "ADOPT"
+    },
+    {
+      "label": "TRIAL"
+    },
+    {
+      "label": "ASSESS"
+    },
+    {
+      "label": "HOLD"
+    }
+  ],
+  "foldername": "backend",
+  "atime": "at1571479618936",
+  "mtime": "mt1571479618245",
+  "ctime": "ct1571479618245",
+  "title": "Backend",
+  "versions": [
+    "2019.09"
+  ]
 }
