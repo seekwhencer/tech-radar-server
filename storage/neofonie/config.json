@@ -1,6 +1,6 @@
 {
   "id": "neofonie",
-  "default": true,
+  "is_default": true,
   "version": "2019.09",
   "quadrants": [
     {
