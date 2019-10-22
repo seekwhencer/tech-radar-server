@@ -30,10 +30,43 @@ npm install
 npm run dev
 ```
 
-##### Production
+## Production
+
+##### Production with default port 8300
+```
+npm start
+```
+Start the server on port `8300`, defined in `package.json` with:
+```
+"start": "cross-env NODE_ENV=production NODE_PORT=8300 node --experimental-modules --experimental-json-modules index.js",`
+```
+
+##### Production with environment variable
 ```
 npm run prod
 ```
+Start the server on the given port with the environment variable `NODE_PORT` 
+```
+"prod": "cross-env NODE_ENV=production node --experimental-modules --experimental-json-modules index.js",`
+```
+
+## Frontend
+Came from Github `Neofonie/neo-tech-radar` [Github](https://github.com/neofonie/tech-radar/)  or [Github Pages](https://neofonie.github.io/tech-radar/#neofonie/2019.09)  
+And will be served from the api server. What port the Frontend must use,
+can be defined in `public/index.html` with:
+```
+window.RADAROPTIONS = {
+    serverMode: true,
+    protocol: 'http',
+    host: 'localhost',
+    port: 8300,
+    apiVersion: 'v1'
+};
+```
+
+Only the `public/index.html` from this repo will be used as home.  
+The `index.html` from the frontend will be ignored.
+
 
 ## Api
 - Authenticate
