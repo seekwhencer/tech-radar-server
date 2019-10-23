@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tech-radar-server:
+    build: .
+    command: npm start
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "8300:8300"
