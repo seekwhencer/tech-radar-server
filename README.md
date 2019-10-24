@@ -68,6 +68,35 @@ Only the `public/index.html` from this repo will be used as home.
 The `index.html` from the frontend will be ignored.
 
 
+## Docker
+Simply run for the **production mode**
+```
+cd /somewhere/on/my/disk/tech-radar-server
+docker-compose up -d
+```
+
+#### Configure
+Change the login credentials in the `docker-compose.yml`:
+```
+environment:
+  - NODE_PORT=8300
+  - NODE_USER=admin
+  - NODE_PASS=change!moi
+```
+
+And change the `public/index.html`:
+```
+window.RADAROPTIONS = {
+    serverMode: true,
+    protocol: 'http',
+    host: 'localhost',
+    port: 8300,
+    apiVersion: 'v1'
+};
+```
+
+
+
 ## Api
 - Authenticate
   ###### [ POST ] `/v1/login`
