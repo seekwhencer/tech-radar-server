@@ -183,5 +183,11 @@ window.RADAROPTIONS = {
 - Update a Dot
   ###### [ POST ] `/v1/radar/:radar/dataset/:dataset/dot/:dot/delete`
 
+---
+- Export all Data as Zip-File
+  ###### [ GET ] `/v1/status/export`
+
+
+
 
 
