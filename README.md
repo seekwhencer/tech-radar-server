@@ -55,7 +55,7 @@ Came from Github `Neofonie/neo-tech-radar` [Github](https://github.com/neofonie/
 And will be served from the api server. What port the Frontend must use,
 can be defined in `public/index.html` with:
 ```
-window.RADAROPTIONS = {
+const radarOptions = {
     serverMode: true,
     protocol: 'http',
     host: 'localhost',
@@ -86,13 +86,22 @@ environment:
 
 And change the `public/index.html`:
 ```
-window.RADAROPTIONS = {
+const radarOptions = {
     serverMode: true,
     protocol: 'http',
     host: 'localhost',
     port: 8300,
     apiVersion: 'v1'
 };
+```
+
+## Update Production
+```
+cd /somewhere/on/my/disk/tech-radar-server
+docker-compose down
+git fetch --all
+git reset --hard origin/master
+docker-compose up -d --build
 ```
 
 
