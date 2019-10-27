@@ -8,7 +8,7 @@
     "start": "cross-env NODE_ENV=production NODE_PORT=8300 node --experimental-modules --experimental-json-modules index.js",
     "dev": "cross-env NODE_ENV=default node --experimental-modules --experimental-json-modules index.js",
     "prod": "cross-env NODE_ENV=production node --experimental-modules --experimental-json-modules index.js",
-    "postinstall": "cd node_modules/neo-tech-radar && npm install && npm run build"
+    "postinstall": "rm -rf frontend && git clone https://github.com/Neofonie/tech-radar frontend && git -C \"frontend\" checkout $FRONTEND_BRANCH"
   },
   "author": "",
   "license": "ISC",
