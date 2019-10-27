@@ -6,6 +6,8 @@ services:
     build: .
     command: npm start
     volumes:
+      - .:/usr/app
+      - ./node_modules:/usr/app/node_modules
       - ./storage:/usr/app/storage
     ports:
       - "8300:8300"
