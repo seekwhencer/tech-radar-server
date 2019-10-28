@@ -1,8 +1,8 @@
 version: '3'
 services:
-  tech-radar:
-    container_name: server
-    image: tech-radar-server
+  tech-radar-server:
+    container_name: tech-radar-server_fe-${FRONTEND_BRANCH}
+    image: tech-radar-server_fe-${FRONTEND_BRANCH}
     build: .
     command: npm start
     volumes:
