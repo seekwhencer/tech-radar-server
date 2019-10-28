@@ -6,11 +6,11 @@ services:
     build: .
     command: npm start
     volumes:
-      - .:/usr/app
-      - ./node_modules:/usr/app/node_modules
       - ./storage:/usr/app/storage
     ports:
-      - "8300:8300"
+      - ${PORT_OUTER}:${PORT_INNER}
     environment:
       - NODE_USER=admin
       - NODE_PASS=change!moi
+      - FRONTEND_BRANCH=${FRONTEND_BRANCH}
+      - NODE_PORT=${PORT_INNER}

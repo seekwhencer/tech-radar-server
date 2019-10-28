@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "cross-env NODE_ENV=production NODE_PORT=8300 node --experimental-modules --experimental-json-modules index.js",
+    "start": "export NODE_ENV=production && node --experimental-modules --experimental-json-modules index.js",
     "dev": "cross-env NODE_ENV=default node --experimental-modules --experimental-json-modules index.js",
     "prod": "cross-env NODE_ENV=production node --experimental-modules --experimental-json-modules index.js",
-    "postinstall": "rm -rf frontend && git clone https://github.com/Neofonie/tech-radar frontend && git -C \"frontend\" checkout $FRONTEND_BRANCH"
+    "postinstall": "rm -rf frontend && git clone $FRONTEND_REPO frontend && git -C \"frontend\" checkout $FRONTEND_BRANCH && cd frontend && npm install && npm run build && echo $FRONTEND_BRANCH"
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +21,6 @@
     "express-formidable": "^1.2.0",
     "fs-extra": "^8.1.0",
     "jsonwebtoken": "^8.5.1",
-    "neo-tech-radar": "github:Neofonie/tech-radar",
     "ramda": "^0.26.1",
     "slugify": "^1.3.5"
   }
